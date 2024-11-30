@@ -9,47 +9,73 @@
     android:padding="16dp">
 
     <!-- Input Fields -->
-<EditText
-android:id="@+id/editTextNumber"
-android:layout_width="match_parent"
-android:layout_height="48dp"
-android:layout_marginBottom="8dp"
-android:hint="Number 1"
-android:inputType="number"
-android:padding="8dp" />
+    <EditText
+        android:id="@+id/editTextNumber"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="8dp"
+        android:hint="Number 1"
+        android:inputType="number"
+        android:padding="8dp" />
 
-<EditText
-android:id="@+id/editTextNumber2"
-android:layout_width="match_parent"
-android:layout_height="48dp"
-android:layout_marginBottom="16dp"
-android:hint="Number 2"
-android:inputType="number"
-android:padding="8dp" />
+    <EditText
+        android:id="@+id/editTextNumber2"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="16dp"
+        android:hint="Number 2"
+        android:inputType="number"
+        android:padding="8dp" />
 
-    <!-- Result Views -->
-<TextView
-android:id="@+id/textView"
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-android:layout_marginBottom="8dp"
-android:text="Sum: "
-android:textSize="18sp" />
+    <!-- Result View -->
+    <TextView
+        android:id="@+id/resultText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Result: "
+        android:textSize="18sp" />
 
-<TextView
-android:id="@+id/textView2"
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-android:layout_marginBottom="16dp"
-android:text="Product: "
-android:textSize="18sp" />
+    <!-- First Row of Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
 
-    <!-- Button -->
-<Button
-android:id="@+id/button"
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-android:layout_gravity="center"
-android:onClick="onButtonClick"
-android:text="Calculate" />
+        <Button
+            android:id="@+id/addButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="Add" />
+
+        <Button
+            android:id="@+id/subtractButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="Subtract" />
+
+        <Button
+            android:id="@+id/multiplyButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Multiply" />
     </LinearLayout>
+
+    <!-- Second Row: Divide Button -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp">
+
+        <Button
+            android:id="@+id/divideButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Divide" />
+    </LinearLayout>
+</LinearLayout>
